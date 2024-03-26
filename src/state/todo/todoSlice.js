@@ -13,7 +13,11 @@ export const todoSlice = createSlice({
       state.todos.push(action.payload);
     },
     checkIt: (state, action) => {
-      console.log(action.payload);
+      const todoId = action.payload;
+      const todo = state.todos.find((todo) => todo.id === todoId);
+      if (todo) {
+        todo.isDone = !todo.isDone;
+      }
     },
   },
 });
