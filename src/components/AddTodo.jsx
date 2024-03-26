@@ -11,12 +11,11 @@ const AddTodo = () => {
   const addToDoHandler = () => {
     const data = {
       title: todoRef.current.value,
-      date: new Date().toString(),
+      date: new Date().toLocaleDateString(),
       isDone: false,
       id: uuidv4()
     };
     if (data.title) {
-      console.log(data);
       todoRef.current.value = null
       dispatch(addTodo(data));
     }

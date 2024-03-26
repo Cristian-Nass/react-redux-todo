@@ -4,3 +4,12 @@
   padding: 2rem;
   text-align: center;
 }
+
+.todo-wrapper {
+  max-width: 800px;
+  background-color: salmon;
+  margin: 10px auto;
+  padding: 4px;
+  color: rgb(255, 229, 229);
+  border-radius: 4px;
+}
